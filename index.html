@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice-App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Main Heading -->
+  <h1 class="head">Invoice Viewer</h1>
+
+  <!-- Upload Container -->
+  <div class="containner" id="Containner">
+    <div class="dropArea" id="dropZone">
+      <h1>Drag and drop your invoice PDF here</h1>
+      <p>or click to browse your files</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden>
+      <button id="upload-btn">Choose File</button>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Invoice Form -->
+  <div class="form" id="Form">
+    <div class="header">
+      <h1>Invoice Details</h1>
+      <!-- Edit Button -->
+      <button class="edit-btn" id="editBtn">
+        <i class="fa-regular fa-pen-to-square"></i>
+        Edit
+      </button>
+    </div>
+
+    <!-- Data Fields -->
+    <div class="data-field" id="dataFields">
+      <div>
+        <label for="vendor"><i class="fa-solid fa-building"></i> Vendor</label>
+        <input type="text" id="vendor" disabled class="inp-cursor" />
+      </div>
+      <div>
+        <label for="invoice_date"><i class="fa-solid fa-calendar-days"></i> Invoice Date</label>
+        <input type="date" id="invoice_date" disabled class="inp-cursor" />
+      </div>
+      <div>
+        <label for="amount"><i class="fa-solid fa-dollar-sign"></i> Amount</label>
+        <input type="number" id="amount" disabled class="inp-cursor" />
+      </div>
+      <div>
+        <label for="tax_id"><i class="fa-solid fa-hashtag"></i> Tax ID</label>
+        <input type="text" id="tax_id" disabled class="inp-cursor" />
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <p class="done-edit" id="doneEdit"></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+
+</html>
